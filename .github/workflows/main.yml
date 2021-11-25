@@ -43,7 +43,7 @@ jobs:
       - name: Integration Tests
         run: mvn integration-test
         
-      # Push to dockerhub
+      # Build image
       - name: Build image
         uses: docker/build-push-action@v1
         if: startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/master'
